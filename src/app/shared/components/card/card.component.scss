@@ -1,0 +1,53 @@
+.card {
+  border: none;
+  cursor: pointer;
+}
+
+.titulo {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.avaliacao {
+  font-size: 14px;
+  font-weight: bold;
+  color: #be5a0e;
+  display: block;
+}
+
+.valor {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  display: inline-block;
+  margin-right: 10px;
+  &::before {
+    content: "R$";
+    margin-right: 1px;
+  }
+}
+.desconto {
+  font-size: 16px;
+  font-weight: normal;
+  color: rgb(112, 112, 112);
+  display: inline-block;
+  font-style: unset;
+  &::before {
+    content: "R$";
+    margin-right: 1px;
+  }
+}
+
+span {
+  &.badge-warning {
+    background-color: #ffc48c;
+    color: #592b00;
+    border-radius: 3px;
+    padding: 5px 8px !important;
+  }
+}

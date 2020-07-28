@@ -1,0 +1,11 @@
+<div class="card" (click)="retornarCurso()">
+  <img *ngIf="imgURL" [src]="imgURL" class="card-img-top" [alt]="titulo">
+  <div class="card-body p-0">
+    <h5 class="titulo mt-3">{{titulo}}</h5>
+    <small class="subtitulo">{{subtitulo}}</small>
+    <span class="avaliacao">{{nota}}</span>
+    <span class="valor">{{valor | currency}}</span>
+    <span class="desconto"><s>{{desconto | currency}}</s></span>
+    <span class="mt-2 badge badge-pill badge-warning">{{ classificacao }}</span>
+  </div>
+</div>

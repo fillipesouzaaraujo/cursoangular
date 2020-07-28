@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <form [formGroup]="form" (ngSubmit)="inscreverSe()">
+        <div class="mt-3">
+          <b>Inscreva-se e comece a aprender!</b>
+          <hr>
+        </div>
+        <div class="mt-3">
+          <input type="text" class="form-control" placeholder="Nome Completo" formControlName="nomeCompleto" />
+          <span class="msg-invalid" *ngIf="formSubmited && form.get('nomeCompleto').hasError('required')">* Campo obrigatório</span>
+          <span class="msg-invalid" *ngIf="formSubmited && form.get('nomeCompleto').hasError('minlength')">* Informe pelo menos 3 caracteres para o nome</span>
+        </div>
+        <div class="mt-3">
+          <input type="text" class="form-control" placeholder="E-mail" formControlName="email" />
+          <span class="msg-invalid" *ngIf="formSubmited && form.get('email').hasError('required')">* Campo obrigatório</span>
+          <span class="msg-invalid" *ngIf="formSubmited && form.get('email').hasError('email')">* Informe um e-mail válido</span>
+        </div>
+        <div class="mt-3">
+          <input type="password" class="form-control" placeholder="Senha" formControlName="senha" />
+          <span class="msg-invalid" *ngIf="formSubmited && form.get('senha').hasError('required')">* Campo obrigatório</span>
+        </div>
+        <div class="mt-3">
+          <label for="aceito">
+            <input type="checkbox" id="aceito" formControlName="aceitoTermos" /> Aceito receber e-mails com descontos interessantes e recomendações personalizadas
+            <span class="msg-invalid" *ngIf="formSubmited && form.get('aceitoTermos').hasError('required')">* Aceite os termos para continuar</span>
+          </label>
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-danger btn-inscrever">Inscrever-se</button>
+        </div>
+        <div class="mt-3">
+          <small>
+            Ao inscrever-se, você concorda com nossos Termos de uso e nossa Política de privacidade.
+          </small>
+        </div>
+        <div class="mt-3">
+          <hr />
+        </div>
+        <div class="mt-3 text-center">
+          Já tem uma conta? <a [routerLink]="['/login']" routerLinkActive="router-link-active"><b>Login</b></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

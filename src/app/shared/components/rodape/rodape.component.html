@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row rodape mt-4">
+    <div class="col-12 p-0">
+      <hr>
+      <div class="row justify-content-center m-0">
+        <div class="col">
+          <b>
+            As melhores empresas escolhem a plataforma <a href="#">Udemy for Business</a> para desenvolver as habilidades de carreira necessárias.
+          </b>
+        </div>
+        <div class="col-auto">
+          <img alt="Lyft" height="24" width="34" src="https://i.udemycdn.com/partner-logos/lyft-logo.svg">
+          <img alt="Pinterest" height="24" width="99" src="https://i.udemycdn.com/partner-logos/pinterest-logo.svg">
+          <img alt="adidas" height="24" width="36" src="https://i.udemycdn.com/partner-logos/adidas-logo.svg">
+          <img alt="Eventbrite" height="18" width="99" src="https://i.udemycdn.com/partner-logos/eventbrite-logo.svg"><img alt="Surveymonkey" height="24" width="157" src="https://i.udemycdn.com/partner-logos/surveymonkey-logo.svg">
+          <img alt="Booking" height="24" width="140" src="https://i.udemycdn.com/partner-logos/booking-logo.svg">
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col-auto" *ngFor="let item of links">
+              <ul class="link-rodape">
+                <li *ngFor="let link of item.itens">
+                  <a [routerLink]="['/' + link.url]" routerLinkActive="router-link-active">{{link.descricao}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+          <select name="" id="" class="form-control">
+            <option value="">Português BR</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mb-4">
+    <div class="col">
+      <a href=""><b>Curso Online</b></a>
+    </div>
+    <div class="col-auto">
+      © 2020 Curso Online, Inc.
+    </div>
+  </div>
+</div>

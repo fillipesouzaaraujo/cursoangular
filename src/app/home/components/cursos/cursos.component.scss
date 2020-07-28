@@ -1,0 +1,10 @@
+.nav-link {
+  border: 0;
+  color: rgb(122, 122, 122) !important;
+  font-weight: bold;
+
+  &.active {
+    color: #333 !important;
+    border-bottom: 3px solid #333;
+  }
+}
